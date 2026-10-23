@@ -1,0 +1,9 @@
+memberID,name,membershipType,feeStatus
+101,Rahul Sharma,Annual,Paid
+102,Pooja Patel,Monthly,Paid
+103,Amit Verma,Quarterly,Pending
+104,Sneha Reddy,VIP,Paid
+105,Rohan Das,Monthly,Overdue
+106,Ananya Iyer,Annual,Paid
+107,Vikram Malhotra,Quarterly,Paid
+108,Deepak Joshi,Monthly,Pending

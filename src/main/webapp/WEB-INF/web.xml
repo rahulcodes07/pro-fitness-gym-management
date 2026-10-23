@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Pro-Fitness Gym Management System</display-name>
+
+    <listener>
+        <listener-class>com.profitness.web.AppInitListener</listener-class>
+    </listener>
+
+    <!-- Member Management Servlet -->
+    <servlet>
+        <servlet-name>MemberServlet</servlet-name>
+        <servlet-class>com.profitness.web.MemberServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MemberServlet</servlet-name>
+        <url-pattern>/members</url-pattern>
+    </servlet-mapping>
+
+    <!-- Real-Time Check-In Stack Servlet -->
+    <servlet>
+        <servlet-name>CheckInServlet</servlet-name>
+        <servlet-class>com.profitness.web.CheckInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckInServlet</servlet-name>
+        <url-pattern>/checkin</url-pattern>
+    </servlet-mapping>
+
+    <!-- Trainer Appointment Queue Servlet -->
+    <servlet>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <servlet-class>com.profitness.web.AppointmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/appointments</url-pattern>
+    </servlet-mapping>
+
+    <!-- Hierarchical Workout Plan Tree Servlet -->
+    <servlet>
+        <servlet-name>WorkoutTreeServlet</servlet-name>
+        <servlet-class>com.profitness.web.WorkoutTreeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WorkoutTreeServlet</servlet-name>
+        <url-pattern>/workout-plans</url-pattern>
+    </servlet-mapping>
+
+    <!-- Binary Search Tree Servlet -->
+    <servlet>
+        <servlet-name>BSTServlet</servlet-name>
+        <servlet-class>com.profitness.web.BSTServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BSTServlet</servlet-name>
+        <url-pattern>/bst</url-pattern>
+    </servlet-mapping>
+
+    <!-- Facility Floor Plan Graph & Pathfinding Servlet -->
+    <servlet>
+        <servlet-name>GraphServlet</servlet-name>
+        <servlet-class>com.profitness.web.GraphServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GraphServlet</servlet-name>
+        <url-pattern>/zones</url-pattern>
+    </servlet-mapping>
+
+    <!-- Searching & Sorting Algorithms Benchmark Servlet -->
+    <servlet>
+        <servlet-name>SearchSortServlet</servlet-name>
+        <servlet-class>com.profitness.web.SearchSortServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchSortServlet</servlet-name>
+        <url-pattern>/search-sort</url-pattern>
+    </servlet-mapping>
+
+    <!-- Optimization Algorithms (Greedy, Knapsack, Backtracking) Servlet -->
+    <servlet>
+        <servlet-name>AlgorithmServlet</servlet-name>
+        <servlet-class>com.profitness.web.AlgorithmServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AlgorithmServlet</servlet-name>
+        <url-pattern>/algorithms</url-pattern>
+    </servlet-mapping>
+
+    <!-- Membership Code / Expression Evaluator Servlet -->
+    <servlet>
+        <servlet-name>ExpressionServlet</servlet-name>
+        <servlet-class>com.profitness.web.ExpressionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExpressionServlet</servlet-name>
+        <url-pattern>/expression</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
