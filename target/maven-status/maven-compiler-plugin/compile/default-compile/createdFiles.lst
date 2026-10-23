@@ -2,9 +2,7 @@ com\profitness\dsa\AppointmentNode.class
 com\profitness\web\MemberServlet.class
 com\profitness\dsa\DFSResult.class
 com\profitness\web\AppointmentServlet.class
-com\profitness\dsa\KnapsackResult.class
 com\profitness\dsa\ExpressionValidator$CharStack.class
-com\profitness\dsa\TrainerProfile.class
 com\profitness\web\GraphServlet.class
 com\profitness\dsa\BFSResult.class
 com\profitness\dsa\BSTNode.class
@@ -12,14 +10,10 @@ com\profitness\web\AlgorithmServlet.class
 com\profitness\web\BSTServlet.class
 com\profitness\dsa\DataStore.class
 com\profitness\web\AppInitListener.class
-com\profitness\dsa\KnapsackSolver.class
 com\profitness\dsa\SearchAlgorithms.class
 com\profitness\dsa\WorkoutTreeNode.class
-com\profitness\dsa\BacktrackingAssigner.class
 com\profitness\dsa\SortAlgorithms.class
 com\profitness\dsa\WorkoutBinaryTree.class
-com\profitness\dsa\WorkoutExercise.class
-com\profitness\dsa\MemberRequest.class
 com\profitness\web\CheckInServlet.class
 com\profitness\web\ExpressionServlet.class
 com\profitness\web\SearchSortServlet.class
@@ -28,7 +22,6 @@ com\profitness\dsa\CheckInStack.class
 com\profitness\dsa\CheckInNode.class
 com\profitness\dsa\AppointmentQueue.class
 com\profitness\dsa\ValidationResult.class
-com\profitness\dsa\AssignmentResult.class
 com\profitness\dsa\GymGraph.class
 com\profitness\dsa\SortResult.class
 com\profitness\dsa\BSTSearchResult.class

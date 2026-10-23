@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -183,7 +183,7 @@
                     </div>
                     <span class="feature-ds-tag"><i class="fa-solid fa-network-wired"></i> Binary Tree</span>
                     <h3 class="feature-title">Workout Plans</h3>
-                    <p class="feature-desc">Hierarchical exercise routine planning traversed via Pre-Order, In-Order, and Post-Order recursive tree traversals.</p>
+                    <p class="feature-desc">Hierarchical exercise routine planning with In-Order traversal as primary operational workflow; Pre-Order & Post-Order included for comparison.</p>
                     <a href="${pageContext.request.contextPath}/workout-plans.jsp" class="feature-link">
                         Open Module <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -280,11 +280,11 @@
 
                 <div class="ds-card" data-aos="zoom-in" data-aos-delay="600">
                     <div class="ds-card-header">
-                        <span class="ds-card-title"><i class="fa-solid fa-brain" style="color:var(--secondary); margin-right:6px;"></i> Advanced Algorithms</span>
-                        <span class="badge badge-complexity">DP & Greedy</span>
+                        <span class="ds-card-title"><i class="fa-solid fa-brain" style="color:var(--secondary); margin-right:6px;"></i> Greedy Paradigm</span>
+                        <span class="badge badge-complexity">O(n log n)</span>
                     </div>
                     <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                        Greedy Activity Selection for trainer shift allocation and 0/1 Knapsack Dynamic Programming for calorie-optimized workout routines.
+                        Greedy Activity Selection for optimal trainer shift scheduling — guarantees maximum non-overlapping sessions by sorting by finish time and greedy interval scan.
                     </p>
                 </div>
             </div>
@@ -343,8 +343,7 @@
                     <h3 class="phase-title">Advanced Paradigms & Web</h3>
                     <ul class="phase-list">
                         <li><i class="fa-solid fa-check"></i> Greedy Interval Trainer Scheduler</li>
-                        <li><i class="fa-solid fa-check"></i> 0/1 Knapsack Dynamic Programming</li>
-                        <li><i class="fa-solid fa-check"></i> Backtracking Assignment Solver</li>
+                        <li><i class="fa-solid fa-check"></i> Activity Selection — O(n log n) Optimal Scheduling</li>
                         <li><i class="fa-solid fa-check"></i> Jakarta EE 10 & Tomcat 10.1 Web UI</li>
                     </ul>
                 </div>
@@ -429,7 +428,7 @@
                     <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: #fff;">Algorithms</h4>
                     <p style="margin-bottom: 0.35rem;"><a href="${pageContext.request.contextPath}/expression.jsp">Bracket Validator</a></p>
                     <p style="margin-bottom: 0.35rem;"><a href="${pageContext.request.contextPath}/search-sort.jsp">Search & Sort</a></p>
-                    <p><a href="${pageContext.request.contextPath}/algorithms.jsp">Greedy, DP & BT</a></p>
+                    <p><a href="${pageContext.request.contextPath}/algorithms.jsp">Greedy Scheduler</a></p>
                 </div>
             </div>
         </div>
@@ -444,3 +443,5 @@
     <script src="${pageContext.request.contextPath}/js/app.js"></script>
 </body>
 </html>
+
+

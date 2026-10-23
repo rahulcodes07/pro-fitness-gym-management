@@ -178,8 +178,7 @@ public class DSATest {
         }
         System.out.println("SortAlgorithms passed!");
 
-        System.out.println("\n=== 10. TESTING PHASE 4 ALGORITHMIC PROBLEM SOLVING ===");
-        // 10A. Greedy Activity Selection
+        System.out.println("\n=== 10. TESTING GREEDY ACTIVITY SELECTION ===");
         ArrayList<TrainerSession> sessions = new ArrayList<>();
         sessions.add(new TrainerSession("Alice", "T1", 540, 600)); // 9:00 - 10:00
         sessions.add(new TrainerSession("Bob", "T1", 570, 630));   // 9:30 - 10:30 (overlaps)
@@ -188,28 +187,6 @@ public class DSATest {
         assert sched.getTotalSessionsScheduled() == 2 : "1 trainer should take Alice and Charlie";
         assert sched.getUnscheduledSessions().size() == 1 : "Bob should be unscheduled";
         System.out.println("GreedyScheduler passed!");
-
-        // 10B. Dynamic Programming 0/1 Knapsack
-        ArrayList<WorkoutExercise> exercises = new ArrayList<>();
-        exercises.add(new WorkoutExercise("HIIT", 20, 9));
-        exercises.add(new WorkoutExercise("Running", 15, 7));
-        exercises.add(new WorkoutExercise("Yoga", 25, 5));
-        exercises.add(new WorkoutExercise("Plank", 5, 4));
-        KnapsackResult knap = KnapsackSolver.solve(exercises, 30);
-        assert knap.getTotalFitnessValue() > 0;
-        assert knap.getTotalTimeCost() <= 30;
-        System.out.println("KnapsackSolver passed! (Optimal value: " + knap.getTotalFitnessValue() + ", time: " + knap.getTotalTimeCost() + ")");
-
-        // 10C. Backtracking Constraint Assigner
-        ArrayList<MemberRequest> requests = new ArrayList<>();
-        requests.add(new MemberRequest("Member A", "Strength", "Morning"));
-        requests.add(new MemberRequest("Member B", "Strength", "Morning"));
-        ArrayList<TrainerProfile> trainers = new ArrayList<>();
-        trainers.add(new TrainerProfile("Arjun", "Strength", new ArrayList<>(java.util.List.of("Morning", "Evening"))));
-        trainers.add(new TrainerProfile("Vikram", "Strength", new ArrayList<>(java.util.List.of("Morning"))));
-        AssignmentResult assignRes = BacktrackingAssigner.assign(requests, trainers);
-        assert assignRes.getAssignments().size() == 2 : "Both should be assigned across Arjun and Vikram";
-        System.out.println("BacktrackingAssigner passed!");
 
         System.out.println("\n>>> ALL 4 PHASES TESTED AND PASSED 100% SUCCESSFULLY! <<<");
     }

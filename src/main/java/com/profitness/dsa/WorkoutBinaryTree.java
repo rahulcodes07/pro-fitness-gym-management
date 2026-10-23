@@ -7,11 +7,16 @@ import java.util.ArrayList;
  * <p>
  * <b>Data Structure:</b> Binary Tree implemented with custom {@link WorkoutTreeNode} pointers.<br>
  * <b>Pointers:</b> Root pointer to the top-level plan category, each node maintaining {@code left} and {@code right} references.<br>
+ * <b>Primary Traversal:</b> <strong>In-order (Left &rarr; Root &rarr; Right)</strong> is used as the
+ * main operational traversal for displaying workout categories in a logically sorted order —
+ * sub-categories appear before their parent, providing a natural bottom-up curriculum view.<br>
+ * Pre-order and Post-order traversals are also implemented for demonstration and comparison purposes
+ * to showcase all three classical tree traversal strategies.
  * <b>Time Complexities:</b>
  * <ul>
- *   <li>Preorder Traversal: O(n) visiting all nodes (Root &rarr; Left &rarr; Right).</li>
- *   <li>Inorder Traversal: O(n) visiting all nodes (Left &rarr; Root &rarr; Right).</li>
- *   <li>Postorder Traversal: O(n) visiting all nodes (Left &rarr; Right &rarr; Root).</li>
+ *   <li>Inorder Traversal (Primary): O(n) visiting all nodes (Left &rarr; Root &rarr; Right).</li>
+ *   <li>Preorder Traversal (Demo): O(n) visiting all nodes (Root &rarr; Left &rarr; Right).</li>
+ *   <li>Postorder Traversal (Demo): O(n) visiting all nodes (Left &rarr; Right &rarr; Root).</li>
  *   <li>Tree Building: O(1) fixed predefined hierarchy layout.</li>
  * </ul>
  * <b>Gym Application:</b> Models workout curriculum branching from high-level categories (Workout Plans &rarr; Cardio vs Strength)

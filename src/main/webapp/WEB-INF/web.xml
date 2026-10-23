@@ -80,7 +80,7 @@
         <url-pattern>/search-sort</url-pattern>
     </servlet-mapping>
 
-    <!-- Optimization Algorithms (Greedy, Knapsack, Backtracking) Servlet -->
+    <!-- Greedy Activity Selection Algorithm Servlet -->
     <servlet>
         <servlet-name>AlgorithmServlet</servlet-name>
         <servlet-class>com.profitness.web.AlgorithmServlet</servlet-class>

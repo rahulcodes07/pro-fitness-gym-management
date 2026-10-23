@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -153,7 +153,7 @@
             <li class="sidebar-item">
                 <a href="${pageContext.request.contextPath}/algorithms.jsp" class="sidebar-link">
                     <i class="fa-solid fa-brain"></i>
-                    <span>Greedy, DP & BT</span>
+                    <span>Greedy Scheduler</span>
                 </a>
             </li>
         </ul>
@@ -270,43 +270,62 @@
                 </div>
             </div>
 
+            <!-- Primary Traversal Clarification Callout -->
+            <div class="glass-panel mb-4" data-aos="fade-up" style="margin-bottom: 1.5rem; border-left: 4px solid var(--accent-green);">
+                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                    <i class="fa-solid fa-circle-check" style="color: var(--accent-green); font-size: 1.4rem; margin-top: 3px;"></i>
+                    <div>
+                        <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">
+                            Primary Operational Traversal: In-Order Traversal (Left &rarr; Root &rarr; Right)
+                        </h4>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.6;">
+                            In our gym curriculum engine, <strong>In-Order Traversal</strong> is the core operational method because it traverses sub-disciplines before major parent categories, presenting an intuitive bottom-up progressive training path. 
+                            <strong>Pre-Order</strong> and <strong>Post-Order</strong> traversals are fully implemented and showcased below for academic comparison and structural evaluation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Traversal Control Actions -->
             <div class="glass-card mb-4" data-aos="fade-up" style="margin-bottom: 2rem;">
-                <h3 style="font-size: 1.15rem; margin-bottom: 1.25rem;">
-                    <i class="fa-solid fa-route" style="color: var(--secondary); margin-right: 8px;"></i>
-                    Execute Binary Tree Traversals
-                </h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                    <h3 style="font-size: 1.15rem; margin: 0;">
+                        <i class="fa-solid fa-route" style="color: var(--secondary); margin-right: 8px;"></i>
+                        Execute Binary Tree Traversals
+                    </h3>
+                    <span class="badge badge-success">In-Order = Active System Traversal</span>
+                </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
                     <form action="${pageContext.request.contextPath}/workout-plans" method="POST" style="margin: 0;">
-                        <input type="hidden" name="traversal" value="preorder">
-                        <button type="button" class="btn btn-outline" style="width: 100%; justify-content: flex-start; padding: 1rem;" onclick="runTraversal('preorder')">
-                            <i class="fa-solid fa-arrow-down-long" style="color: var(--primary);"></i>
+                        <input type="hidden" name="traversal" value="inorder">
+                        <button type="button" class="btn btn-primary" style="width: 100%; justify-content: flex-start; padding: 1.1rem; border: 2px solid var(--accent-green);" onclick="runTraversal('inorder')">
+                            <i class="fa-solid fa-star" style="color: #ffd700;"></i>
                             <div style="text-align: left;">
-                                <div style="font-weight: 700; color: #fff;">Pre-Order Traversal</div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted);">Root &rarr; Left &rarr; Right</div>
+                                <div style="font-weight: 700; color: #fff;">In-Order Traversal <span class="badge badge-paid" style="font-size: 0.65rem; margin-left: 6px;">PRIMARY</span></div>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.85);">Left &rarr; Root &rarr; Right (Operational Curriculum)</div>
                             </div>
                         </button>
                     </form>
 
                     <form action="${pageContext.request.contextPath}/workout-plans" method="POST" style="margin: 0;">
-                        <input type="hidden" name="traversal" value="inorder">
-                        <button type="button" class="btn btn-outline" style="width: 100%; justify-content: flex-start; padding: 1rem;" onclick="runTraversal('inorder')">
-                            <i class="fa-solid fa-arrows-split-up-and-left" style="color: var(--secondary);"></i>
+                        <input type="hidden" name="traversal" value="preorder">
+                        <button type="button" class="btn btn-outline" style="width: 100%; justify-content: flex-start; padding: 1.1rem;" onclick="runTraversal('preorder')">
+                            <i class="fa-solid fa-arrow-down-long" style="color: var(--primary);"></i>
                             <div style="text-align: left;">
-                                <div style="font-weight: 700; color: #fff;">In-Order Traversal</div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted);">Left &rarr; Root &rarr; Right</div>
+                                <div style="font-weight: 700; color: #fff;">Pre-Order Traversal <span class="badge badge-basic" style="font-size: 0.65rem; margin-left: 6px;">DEMO</span></div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Root &rarr; Left &rarr; Right (Top-down Showcase)</div>
                             </div>
                         </button>
                     </form>
 
                     <form action="${pageContext.request.contextPath}/workout-plans" method="POST" style="margin: 0;">
                         <input type="hidden" name="traversal" value="postorder">
-                        <button type="button" class="btn btn-outline" style="width: 100%; justify-content: flex-start; padding: 1rem;" onclick="runTraversal('postorder')">
-                            <i class="fa-solid fa-arrow-up-long" style="color: var(--accent-green);"></i>
+                        <button type="button" class="btn btn-outline" style="width: 100%; justify-content: flex-start; padding: 1.1rem;" onclick="runTraversal('postorder')">
+                            <i class="fa-solid fa-arrow-up-long" style="color: var(--secondary);"></i>
                             <div style="text-align: left;">
-                                <div style="font-weight: 700; color: #fff;">Post-Order Traversal</div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted);">Left &rarr; Right &rarr; Root</div>
+                                <div style="font-weight: 700; color: #fff;">Post-Order Traversal <span class="badge badge-basic" style="font-size: 0.65rem; margin-left: 6px;">DEMO</span></div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Left &rarr; Right &rarr; Root (Bottom-up Cleanup)</div>
                             </div>
                         </button>
                     </form>
@@ -320,22 +339,22 @@
                         <i class="fa-solid fa-list-ol" style="color: var(--accent-green); margin-right: 8px;"></i>
                         Traversal Output Sequence
                     </h3>
-                    <span id="currentTraversalType" class="badge badge-paid">Pre-Order Sequence</span>
+                    <span id="currentTraversalType" class="badge badge-paid">In-Order Sequence (Primary Operational)</span>
                 </div>
 
                 <!-- Sequence Pills Display -->
                 <div id="sequencePills" style="display: flex; gap: 0.5rem; flex-wrap: wrap; padding: 1rem; background: rgba(14, 18, 32, 0.7); border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--border-subtle);">
-                    <!-- Default Pre-order sequence -->
-                    <span class="badge badge-vip">Workout Plans</span> &rarr;
-                    <span class="badge badge-basic">Cardio</span> &rarr;
+                    <!-- Default In-order sequence -->
                     <span class="badge badge-basic">HIIT</span> &rarr;
+                    <span class="badge badge-basic">Cardio</span> &rarr;
                     <span class="badge badge-basic">Running</span> &rarr;
-                    <span class="badge badge-basic">Strength</span> &rarr;
-                    <span class="badge badge-basic">Upper Body</span> &rarr;
+                    <span class="badge badge-vip">Workout Plans (Root)</span> &rarr;
                     <span class="badge badge-basic">Chest</span> &rarr;
+                    <span class="badge badge-basic">Upper Body</span> &rarr;
                     <span class="badge badge-basic">Shoulders</span> &rarr;
-                    <span class="badge badge-basic">Lower Body</span> &rarr;
-                    <span class="badge badge-basic">Legs</span>
+                    <span class="badge badge-basic">Strength</span> &rarr;
+                    <span class="badge badge-basic">Legs</span> &rarr;
+                    <span class="badge badge-basic">Lower Body</span>
                 </div>
 
                 <!-- Step Log Container -->
@@ -345,19 +364,19 @@
                 <div id="traversalStepsContainer" class="step-container animate-steps">
                     <div class="step-item">
                         <span class="step-num">Step 1</span>
-                        <div class="step-desc">Visited root node <strong>Workout Plans</strong> &bull; Process routine planning.</div>
+                        <div class="step-desc">Recursed to leftmost leaf node <strong>HIIT</strong>.</div>
                     </div>
                     <div class="step-item">
                         <span class="step-num">Step 2</span>
-                        <div class="step-desc">Recursed to left child <strong>Cardio</strong>.</div>
+                        <div class="step-desc">Visited parent node <strong>Cardio</strong>.</div>
                     </div>
                     <div class="step-item">
                         <span class="step-num">Step 3</span>
-                        <div class="step-desc">Visited leaf node <strong>HIIT</strong>.</div>
+                        <div class="step-desc">Visited right child <strong>Running</strong>.</div>
                     </div>
                     <div class="step-item">
                         <span class="step-num">Step 4</span>
-                        <div class="step-desc">Visited sibling node <strong>Running</strong>.</div>
+                        <div class="step-desc">Visited root node <strong>Workout Plans</strong>.</div>
                     </div>
                 </div>
             </div>
@@ -366,17 +385,18 @@
             <div class="ds-info-box" data-aos="fade-up">
                 <i class="fa-solid fa-circle-info ds-info-icon"></i>
                 <div>
-                    <h4 class="ds-info-title">Data Structure Mechanics: Binary Tree Hierarchies</h4>
+                    <h4 class="ds-info-title">Data Structure Mechanics: Binary Tree Hierarchies & Traversal Selection</h4>
                     <p class="ds-info-desc">
                         Each node contains up to two children (left and right pointer references). Tree traversals are recursive depth-first search strategies visiting every node exactly once:
-                        <strong>Pre-order</strong> visits root first (useful for cloning/serializing), 
-                        <strong>In-order</strong> visits left subtree, root, then right (sorted in BSTs), and 
-                        <strong>Post-order</strong> visits root last (ideal for teardown/deletion).
+                        <br><strong>In-order (Primary Operation):</strong> Visits left subtree, root, then right. In this gym system, it presents progressive workout routines where foundational sub-exercises precede broader program categories.
+                        <br><strong>Pre-order (Demonstration):</strong> Visits root first; showcased to illustrate hierarchical curriculum cloning and top-down serialization.
+                        <br><strong>Post-order (Demonstration):</strong> Visits children before root; showcased to illustrate memory deallocation and bottom-up metric rollups.
                     </p>
                     <div class="ds-complexity-tags">
                         <span class="badge badge-complexity">Time Complexity: O(n)</span>
                         <span class="badge badge-complexity">Auxiliary Stack Space: O(h) [Height]</span>
-                        <span class="badge badge-complexity">Recursive Tree Traversal</span>
+                        <span class="badge badge-complexity">Primary: In-Order</span>
+                        <span class="badge badge-complexity">Demo: Pre & Post</span>
                     </div>
                 </div>
             </div>
@@ -447,3 +467,5 @@ function runTraversal(type) {
 </script>
 </body>
 </html>
+
+
